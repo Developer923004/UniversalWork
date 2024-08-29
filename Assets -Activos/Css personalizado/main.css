@@ -1,0 +1,464 @@
+
+
+/*---------------------------------------<BODY>----------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*Stilos del fondo del body en la imagen*/
+/*-------------------------------------------------------------------------------------*/
+body {
+
+    background-image: url('../Img\ -Imagenes/LOGOS/MUNDOLOGO.jpeg'); /* Ruta relativa a la imagen */
+    /*background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    height: 100vh; /* Altura de la ventana del navegador */ 
+    background-size: 1500px auto; /* Ancho específico con altura automática */
+    /*color: #fff; /* Color del texto para asegurar buen contraste (opcional) */
+}
+
+
+
+/*---------------------------------------<NAV>----------------------------------------------*/
+/*alineamos el logo del menu de navegacion en la etiqueta html <a>*/
+/*clase que existe en el menu ".navbar-brand"*/
+.navbar-brand {
+    text-align: center; /* Centra el contenido del contenedor */
+    display: inline-block; /* Hace que el contenedor ajuste su tamaño al contenido */
+}
+
+/*alineamos el logo del menu de navegacion en la etiqueta html <img>*/
+/*clase que existe en el menu ".navbar-brand" y img se refiere ala <img>*/
+/*.navbar-brandimg {
+    /*vertical-align: middle; /* Alinea verticalmente el logo con el texto *//*
+}
+
+/*clase que existe en el menu ".navbar-brand" y h5 se refiere ala <h5>*/
+/*alineamos el logo del menu de navegacion en la etiqueta html <h5>*/
+/*.navbar-brandh5 {
+    display: inline-block; /* Hace que el texto se alinee con el logo */
+    /*margin: 0; /* Elimina el margen por defecto del h5 */
+    /*vertical-align: middle; /* Alinea verticalmente el texto con el logo */
+/*}*/
+
+/* Estilos para el Navbar */
+.navbar {
+    position: fixed; /*que se pueda mover por la pagina relativamente*/
+   /*position: fixed; /* Fija el navbar en la parte superior izquierda de la ventana */ 
+   /*left: 100px;*/
+  /* height: 12%; /*altura del navbar*/
+  width: 90%;
+    background-color:rgba(0, 0, 0, 0.5); /*fondo del navbar*/
+    /*padding: 10px 20px; /* Espaciado interno del navbar */
+    /*z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+/* Estilos para los elementos de la lista del Navbar item */
+.nav-item {
+    margin: 010px; /* Espaciado entre los elementos de la lista */
+    
+}
+
+/* Estilos para los elementos de la lista del Navbar link */
+.nav-link{
+    color: #fff; /* Color del texto de los enlaces */
+
+}
+
+/* Estilos al pasar con el mouse*/
+.nav-link:hover{
+    color: #f50909;/* Cambia el color del texto del enlace cuando el cursor está sobre él*/
+}
+
+/* Estilos para el submenú desplegable */
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente del menú desplegable */
+}
+
+/* Estilos para los items del submenu*/
+.dropdown-item {
+    color: #fff; /* Color del texto de los elementos del menú */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+/* Cambia el color de fondo y texto de los items del submenu al pasar el mouse*/
+.dropdown-item:hover {
+    background-color: rgba(255, 87, 51, 0.5); /* Fondo con color naranja transparente al pasar el mouse */
+    color: #fff; /* Color del texto cuando se pasa el mouse */
+}
+
+
+/*--------------------------------------carrousel------------------------------------------*/
+
+/* Estilo para el contenedor del carrusel */
+.carousel-container {
+    position: absolute;
+    width: 50vw;   /*ancho del carrousel*/
+    height: 30vh; /*altura del carrousel*/
+    perspective: 1200px; /* Profundidad para la animación 3D */
+    margin: 10%; /*separa el carrousel de la parte superior de la pagina*/
+    /*border: 5px solid; /* Borde sólido */
+    /*border-image: linear-gradient(to right, red, darkred); /* Degradado rojo */
+    /*border-image-slice: 2; /* Asegura que el degradado cubra el borde completo */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Estilo para el contenedor del carrusel que gira */
+.carousel-wrapper {
+    /*position: absolute; /*hace que el carrousel se quede fijo*/
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /*hace que las imagenes se contorne como anillo*/
+    animation: spin 20s infinite linear; /* Anima la rotación del carrusel de la imagenes */
+}
+
+/* Estilo para los elementos del carrusel */
+.carousel-item {
+    /*position: absolute;
+    width: 100px; /* Ancho de los elementos */
+    height: 100px; /* Alto de los elementos */
+    text-align: center;
+    line-height: 100px; /* Centra el texto verticalmente */
+    font-size: 1rem;
+    color: white;
+    /*background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
+    /*border-radius: 50%; /* Bordes redondeados */
+    display: flex; /* Usa flexbox para alinear el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    
+}
+
+/* Posiciona las imegenes en un círculo*/
+.carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
+.carousel-item:nth-child(2) { transform: rotateY(72deg) translateZ(300px); }
+.carousel-item:nth-child(3) { transform: rotateY(144deg) translateZ(300px); }
+.carousel-item:nth-child(4) { transform: rotateY(216deg) translateZ(300px); }
+.carousel-item:nth-child(5) { transform: rotateY(288deg) translateZ(300px); }
+
+/* Animación de rotación */
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Estilo para imágenes en el carrusel */
+.carousel-itemimg {
+    width: 100px; /* Ancho de las imágenes */
+    height: 100px; /* Alto de las imágenes */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    border-radius: 50%; /* Bordes redondeados para las imágenes */
+}
+
+
+/* Estilo para los cuadros de texto */
+.text-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: justify; /*justifica el texto*/
+    position: relative;
+    
+    
+}
+
+
+
+
+
+/*---------------------------------------<H2>----------------------------------------------*/
+/* stilos America del norte,America latina,Europa,Asia,Oceania,Africa,Freelancer y remoto,Internacionales*/
+h2 {
+    font-weight: bold; /*agrega negrilla a los titulos h2*/
+}
+
+
+/*---------------------------------------<P>----------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------*/
+/*animaciones hacia la derecha de America del norte,Europa,Oceania,freelancer y remote*/
+/*-------------------------------------------------------------------------------------*/
+/* Define la animación llamada 'slideLeft' */
+@keyframes slideLeft {
+    0% {
+        /* Comienza con el texto desplazado fuera de la vista a la derecha */
+        transform: translateX(100%);
+        /* Opcional: puedes ajustar la opacidad al inicio si lo deseas */
+        opacity: 0;
+    }
+    100% {
+        /* Termina con el texto en su posición original */
+        transform: translateX(-100%);
+        /* Opcional: puedes ajustar la opacidad al final si lo deseas */
+        opacity: 1;
+    }
+}
+
+/* Aplica la animación al elemento con la clase 'animate-text' */
+.animate-textizquierda {
+    /* Aplica la animación 'slideLeft' */
+    animation: slideLeft 5s linear infinite;
+    /* Ajusta la visibilidad del texto si es necesario */
+    opacity: 1;
+    /* Asegúrate de que el elemento tenga suficiente ancho para permitir el desplazamiento */
+    display: inline-block;
+       /*aplicar color rojo alos encabezados*/
+       color: red;
+}
+
+
+/*-------------------------------------------------------------------------------------*/
+/*animaciones hacia la derecha de: America latina,Asia,Africa,Internacionales*/
+/*-------------------------------------------------------------------------------------*/
+/* Define la animación llamada 'slideRight' */
+@keyframes slideRight {
+    0% {
+        /* Comienza con el texto desplazado fuera de la vista a la izquierda */
+        transform: translateX(-100%);
+        /* Opcional: puedes ajustar la opacidad al inicio si lo deseas */
+        opacity: 0;
+    }
+    100% {
+        /* Termina con el texto desplazado fuera de la vista a la derecha */
+        transform: translateX(100%);
+        /* Opcional: puedes ajustar la opacidad al final si lo deseas */
+        opacity: 1;
+    }
+}
+
+/* Aplica la animación al elemento con la clase 'animate-text' */
+.animate-textderecha {
+    /* Aplica la animación 'slideRight' */
+    animation: slideRight 5s linear infinite;
+    /* Ajusta la visibilidad del texto si es necesario */
+    opacity: 1;
+    /* Asegúrate de que el elemento tenga suficiente ancho para permitir el desplazamiento */
+    display: inline-block;
+   /*aplicar color rojo alos encabezados*/
+    color: red;
+}
+
+/* Stilo para los <p> */
+p{
+    color: #fff; /*aplica color blanco a los parrafos*/
+    font-weight: bold; /* Hace que el texto sea negrilla */
+    text-align: justify; /*justifica el texto*/
+}
+
+pre{    
+    color: #fff; /*aplica color blanco a los parrafos*/
+    font-weight: bold; /* Hace que el texto sea negrilla */
+    text-align: justify; /*justifica el texto*/}
+
+/* Ajusta el espacio superior e inferior entre los párrafos */
+p {
+    margin-top: 1rem; /* Espacio encima del párrafo */margin-bottom: 1rem; /* Espacio debajo del párrafo */
+}
+
+/* Alternativamente, usa padding para ajustar el espacio interno del párrafo */
+p {
+    padding-top: 0.5rem; /* Espacio dentro del párrafo, encima del texto */
+    padding-bottom: 0.5rem; /* Espacio dentro del párrafo, debajo del texto */
+}
+
+/* Ajusta la altura de línea para mejorar la legibilidad */
+p {
+    line-height: 1.4; /* Altura de línea para separar las líneas de texto */
+}
+
+/* Ajusta el espacio entre palabras */
+p {
+    word-spacing: 0.2rem; /* Espacio adicional entre palabras */
+}
+
+
+/*---------------------------------------<a>----------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*Stilos para los link de cada icono de bolsas de empleo*/
+/*-------------------------------------------------------------------------------------*/
+
+/*Stilo para el texto del link*/
+.link-a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: white; /* Color del texto del enlace */
+    font-size: 1rem; /* Tamaño de fuente del texto */
+    
+    
+/* Stilo para el icono del link*/   
+}
+.icon-link-i {
+   
+    font-size: 1rem; /* Tamaño del ícono (altura y ancho) */
+    color: red; /* Color del ícono */
+    
+}
+
+
+/*---------------------------------------<img>----------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*Animacion logotipo de bolsa de empleo*/
+/*-------------------------------------------------------------------------------------*/
+
+/*Animacion de imagen*/
+.animated-image {
+    transition: transform 0.50s ease-in-out; /* Transición suave para la animación */
+    padding: 10px; /* Opcional: agrega un poco de espacio alrededor de la imagen */
+    
+}
+
+/* Animacion para el efecto de animación al pasar el mouse */
+.animated-image:hover {
+ transform: rotate(30deg) scale(1.30); /* Inclina y aumenta el tamaño de la imagen */
+ 
+}
+
+
+/*---------------------------------------<div> container--------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*Stilos container bolsa de empleo*/
+/*-------------------------------------------------------------------------------------*/
+
+/* Contenedor con borde y sombreado para encabezados hacia la derecha bolsa de empleo*/
+.container-custom-derecha {
+    border: 2px solid #333; /* Borde de 2 píxeles, color gris oscuro */
+   border-radius: 10px; /* Bordes redondeados (opcional) */
+   box-shadow: 08px 12px 10px 10px rgba(100, 6, 223, 0.2); /* Sombreado */
+    padding: 20px; /* Espaciado interno del contenedor */
+    /*rgba(0, 0, 0, 0.5), /* Color negro con 50% de opacidad al inicio */
+    /*rgba(0, 0, 0, 0)      /* Color negro completamente transparente al final */
+    background-color:rgba(240, 250, 260, 0.2) ; /* Fondo blanco (opcional) */
+    /*margin: 20px; /* Espaciado externo del contenedor */
+}
+
+/* Contenedor con borde y sombreado para encabezados hacia la izquierda bolsa de empleo*/
+.container-custom-izquierda {
+    border: 2px solid #333; /* Borde de 2 píxeles, color gris oscuro */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+    box-shadow: -08px  12px 10px 10px rgba(100, 6, 223, 0.2); /* Sombreado */
+    padding: 20px; /* Espaciado interno del contenedor */
+    background-color: rgba(240, 250, 260, 0.1); /* Fondo blanco (opcional) */
+    /*margin: 20px; /* Espaciado externo del contenedor */
+}
+
+/* Contenedor con borde y sombreado para el slider principal*/
+.container-custom-slider {
+    /*border: 2px solid #333; /* Borde de 2 píxeles, color gris oscuro */
+    /*border-radius: 10px; /* Bordes redondeados (opcional) */
+    box-shadow: 08px 12px 10px 10px rgba(100, 6, 223, 0.2); /* Sombreado */
+    padding: 20px; /* Espaciado interno del contenedor */
+    /*rgba(0, 0, 0, 0.5), /* Color negro con 50% de opacidad al inicio */
+    /*rgba(0, 0, 0, 0)      /* Color negro completamente transparente al final */
+    background-color:rgba(100, 6, 223, 0.2) ; /* Fondo blanco (opcional) */
+    /*margin: 20px; /* Espaciado externo del contenedor */
+}
+
+
+
+
+/*---------------------------------------<footer>--------------------------------*/
+/* Estilos del footer */
+.footer {
+    background-color:rgba(0, 0, 0, 0.5); /*fondo del navbar*/
+    /*background-color: #333; /* Color de fondo oscuro para el footer */
+    color: #fff; /* Color del texto blanco para el footer */
+    padding: 40px 20px; /* Espaciado interno del footer */
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    display: flex; /* Usa Flexbox para el diseño del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos del contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para la sección de información en el footer */
+.footer-info {
+    flex: 1; /* Permite que este elemento ocupe el espacio disponible */
+    margin-right: 20px; /* Espaciado a la derecha del elemento */
+}
+
+/* Estilos para la sección del logo en el footer */
+.footer-logo {
+    margin-bottom: 20px; /* Espaciado debajo del logo */
+}
+
+/* Estilo para la imagen del logo */
+.footer-logo-img {
+    width: 150px; /* Ancho fijo para la imagen del logo */
+    margin-bottom: 10px; /* Espaciado debajo de la imagen del logo */
+}
+
+/* Estilos para la navegación en el footer */
+.footer-nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+/* Estilos para los elementos de la lista en la navegación del footer */
+/*.footer-nav li {
+    margin-bottom: 10px; /* Espaciado debajo de cada elemento de la lista */
+    /*color: #f50909;
+}*/
+
+/* Estilos para los enlaces en la navegación del footer */
+/*.footer-nav a {
+    color: #fff; /* Color del texto blanco para los enlaces */
+   /* text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+/*}
+
+/* Estilo para los enlaces cuando el usuario pasa el ratón sobre ellos */
+/*.footer-nav a:hover {
+    text-decoration: underline; /* Añade un subrayado al pasar el ratón */
+/*}
+
+/* Estilos para la sección de contacto en el footer */
+.footer-contact {
+    margin-top: 20px; /* Espaciado arriba de la sección de contacto */
+  
+}
+
+/* Estilos para los enlaces en la sección de contacto */
+.footer-contact a {
+    color: #fff; /* Color del texto blanco para los enlaces */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+}
+
+/* Estilo para los enlaces de contacto cuando el usuario pasa el ratón sobre ellos */
+.footer-contact a:hover {
+    text-decoration: underline; /* Añade un subrayado al pasar el ratón */
+    color: #f50909;
+}
+
+/* Estilos para la sección de suscripción al boletín */
+.footer-newsletter {
+    flex: 1; /* Permite que este elemento ocupe el espacio disponible */
+    max-width: 400px; /* Ancho máximo de la sección de suscripción */
+}
+
+/* Estilo para el título de la sección de suscripción al boletín */
+.footer-newsletter h3 {
+    margin-bottom: 10px; /* Espaciado debajo del título */
+}
+
+/* Estilos para el formulario de suscripción al boletín */
+.footer-newsletter form {
+    display: flex; /* Usa Flexbox para el diseño del formulario */
+    flex-direction: column; /* Organiza los elementos del formulario en una columna */
+}
+
+/* Estilos para el campo de entrada del formulario de suscripción */
+.footer-newsletter input {
+    padding: 10px; /* Espaciado interno del campo de entrada */
+    margin-bottom: 10px; /* Espaciado debajo del campo de entrada */
+    border: none; /* Elimina el borde predeterminado del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados en el campo de entrada */
+}
